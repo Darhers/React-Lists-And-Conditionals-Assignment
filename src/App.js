@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Validation from './Validation/Validation.js'
 import logo from './logo.svg';
 import './App.css';
 
@@ -20,7 +21,7 @@ class App extends Component {
           type="text" 
           onChange={(event) => {this.getInputLengthHandler(event)}}
           placeholder="Enter your text here!"/>
-        <p>{this.state.inputLength}</p>
+        <Validation length={this.state.inputLength} />
       </div>
     );
   }
